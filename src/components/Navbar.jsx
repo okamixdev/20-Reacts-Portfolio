@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------
 import React, { useState } from 'react';
 import logo from './img/mono.svg';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -14,9 +15,9 @@ function Navbar() {
 
         <nav>
             <div className='cabeza'>
-                <a href='index.html'>
+                <Link to = "/">
                     <img src={logo} alt="logo" className="logo" />
-                </a>
+                </Link>
                 <h1>Portfolio</h1>
                 <div id='hamburger'>
                     <i id='ham'
@@ -31,11 +32,10 @@ function Navbar() {
                 <ul 
                     className={action ? 'nav-bar active' : 'nav-bar'}
                     onClick={handleClick}>
-                    <li><a className='active' href='index.html'>Home</a></li>
-                    <li><a href='about.html'>About</a></li>
-                    <li><a href='contact.html'>Projects</a></li>
-                    <li><a href='contact.html'>Contact</a></li>
-                    <li><a href='contact.html'>Resume</a></li>
+                    <li><Link to = "/" className='active' >Home</Link></li>
+                    <li><Link to = "/about">About</Link></li>
+                    <li><Link to = "/projects">Projects</Link></li>
+                    <li><Link to = "/contact">Contact</Link></li>
                 </ul>
             </div>
 

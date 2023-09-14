@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fondo: rgb(32, 32, 32);
+}
+
 ::selection {
   background: rgba(177, 177, 177, 0.308);
 }
@@ -36,7 +40,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(32, 32, 32);
+  background: var(--fondo);
+  position: sticky;
+  top: 0;
 }
 
 nav img {
@@ -68,6 +74,11 @@ nav img {
   transition: ease-in-out 300ms;
 }
 
+.nav-bar a.active {
+  color: #58A7C6;
+  transition: ease-in-out 300ms;
+}
+
 #hamburger i {
   color: #58A7C6;
 }
@@ -76,13 +87,261 @@ nav img {
   display: none;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fondo);
+  position: sticky;
+  bottom: 3;
+  height: 50px;
+  gap: 30px;
+  font-size: 30px;
+}
+
+.footer i:hover {
+  color: #58A7C6;
+  transition: ease-in-out 300ms;
+}
+
+.about {
+  height: 100vh;
+  background-image: url('../img/office-back.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about .info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.425);
+}
+
+.about img {
+  height: auto;
+  width: 400px;
+  align-items: center;
+  border: 3px solid #58A7C6;
+  margin: 30px auto;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.about h1 {
+  margin: 0px auto 2px auto;
+  border-bottom: 2px solid #58A7C6;
+  width: 50%;
+}
+
+.about span {
+  color: #58A7C6;
+}
+
+.about h4 {
+  margin: 0px auto 5px auto;
+  color: #58A7C6;
+}
+
+.about p {
+  border: 2px solid #58A7C6;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 2px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.contact {
+  height: 100vh;
+}
+
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../img/office-back.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.projects .titulo {
+  background-color: var(--fondo);
+  padding: 10px;
+  margin-top: 34px;
+  border-radius: 20px;
+  border: 2px solid #58A7C6;
+
+}
+
+.projects .info {
+  background-color: var(--fondo);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+}
+
+@keyframes project {
+  0%   {border-color: #58A7C6;}
+  25%  {border-color: var(--fondo);}
+  50%  {border-color: #919191;}
+  100% {border-color: #58A7C6;}
+}
+
+.project {
+  border-radius: 40px;
+  border: 2px solid #58A7C6;
+  margin-bottom: 30px;
+  width: 600px;
+  height: 100%;
+}
+
+.project:hover {
+  border: 20px solid #58A7C6;
+  animation-name: project;
+  animation-duration: 3s;
+  transition: ease-in-out 300ms;
+
+}
+
+.project h1 {
+  color: #58A7C6;
+  border-bottom: 2px dashed whitesmoke;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+
+.project h3 {
+  color: var(--fondo);
+  font-size: 15px;
+  color: #58A7C6;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/office-865091.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.home .info {
+  height: 100vh;
+  background-color: rgba(32, 32, 32, 0.568);
+  padding: 30px 0;
+}
+
+.home .info h1,
+h3,
+h4 {
+  color: #58A7C6;
+}
+
+.home .info h1 {
+  font-size: 3rem;
+}
+
+.home .info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.home .info h4 {
+  font-size: 1.4rem;
+}
+
+.home .info .boton {
+  color: #58A7C6;
+  padding: 2px 20px;
+  border: 2px solid #58A7C6;
+  border-radius: 10px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.home .info .boton:hover {
+  background-color: #58A7C6;
+  color: var(--fondo);
+  transition: ease-in-out 300ms;
+}
+
+
+.contact {
+  background-image: url(../img//social.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  background: var(--fondo);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+
+form h3 {
+  color: #58A7C6;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+form input, form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-size: 15px;
+  border-radius: 15px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.397);
+  font-size: 15px;
+  border: 2px solid #58A7C6;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 20px;
+}
+
+form button:hover {
+  background-color: #58A7C6;
+  color: var(--fondo);
+  transition: ease-in-out 300ms;
+}
 
 
 
 /* --------------------------------------------------------------------------------------------- */
 /* Media Queries */
 @media (max-width: 769px) {
-  
+
   nav {
     display: flex;
     flex-direction: column;
@@ -99,7 +358,7 @@ nav img {
     justify-content: center;
     height: 85vh;
     border-top: 2px solid #58A7C6;
-    padding: 0px 100px;
+    padding: 0px 5rem;
     background-color: #2F6F89;
     font-size: 1.6rem;
     border-radius: 20px;
@@ -120,4 +379,168 @@ nav img {
     cursor: pointer;
   }
 
+
+  .footer i:hover {
+    color: #58A7C6;
+    transition: ease-in-out 300ms;
+  }
+
+  .about {
+    height: 100vh;
+    background-image: url('../img/office-back.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about .info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.425);
+  }
+
+  .about img {
+    height: auto;
+    width: 250px;
+    align-items: center;
+    border: 3px solid #58A7C6;
+    margin: 30px auto;
+    border-radius: 20px;
+  }
+
+  .about h1 {
+    margin: 0px auto 5px auto;
+    border-bottom: 2px solid #58A7C6;
+    width: 50%;
+  }
+
+  .about span {
+    color: #58A7C6;
+  }
+
+  .about h4 {
+    margin: 0px auto 5px auto;
+    color: #58A7C6;
+  }
+
+  .about p {
+    border: 2px solid #58A7C6;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 2px;
+    width: 80%;
+  }
+
+  .contact {
+    height: 100vh;
+  }
+
+  .projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/office-back.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .projects .titulo {
+    background-color: var(--fondo);
+    padding: 10px;
+    margin-top: 34px;
+    border-radius: 20px;
+    border: 2px solid #58A7C6;
+
+  }
+
+  .projects .info {
+    background-color: var(--fondo);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+  }
+
+  .project {
+    border-radius: 40px;
+    border: 2px solid #58A7C6;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .project h1 {
+    color: #58A7C6;
+    border-bottom: 2px dashed whitesmoke;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    font-size: 20px;
+  }
+
+  .project h3 {
+    color: var(--fondo);
+    font-size: 15px;
+    color: #58A7C6;
+  }
+
+  .project-link {
+    text-decoration: none;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/office-865091.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home .info {
+    background-color: rgba(32, 32, 32, 0.568);
+    padding: 30px 0;
+  }
+
+  .home .info h1,
+  h3,
+  h4 {
+    color: #58A7C6;
+  }
+
+  .home .info h1 {
+    font-size: 3rem;
+  }
+
+  .home .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .home .info h4 {
+    font-size: 1.4rem;
+  }
+
+  .home .info .boton {
+    color: #58A7C6;
+    padding: 2px 20px;
+    border: 2px solid #58A7C6;
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .home .info .boton:hover {
+    background-color: #58A7C6;
+    color: var(--fondo);
+    transition: ease-in-out 300ms;
+  }
 }
