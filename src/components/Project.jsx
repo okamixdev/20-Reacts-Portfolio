@@ -4,7 +4,7 @@ const Project = (props) => {
 
     return (
 
-        <div className="project" style={
+        <div className="project card" style={
             {
                 backgroundImage: `url(${require(`./img/${props.img}`)})`,
                 backgroundSize: 'cover',
