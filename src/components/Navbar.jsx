@@ -18,7 +18,7 @@ function Navbar() {
                 <Link to="/">
                     <img src={logo} alt="logo" className="logo" />
                 </Link>
-                <h1>okamixdev</h1>
+                <h1 className='glitch' data-text="okamixdev">okamixdev</h1>
                 <div id='hamburger'>
                     <i id='ham'
                         onClick={handleClick}
