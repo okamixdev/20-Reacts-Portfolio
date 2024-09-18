@@ -13,7 +13,6 @@ export const Projects = (props) => {
 
 
 
-
         </div>
     );
 };

@@ -1,15 +1,20 @@
 import React from "react";
 import { About } from "./About";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const Home = () => {
     return (
         <div className="home">
-            <div className="info">
+            <motion.div
+                initial={{ scale: 0}}
+                animate={{ scale: 1.2, zIndex: -1 }}
+                transition={{ duration: 0.5 }}
+                className="info">
                 <h4><span>Hi</span> everyone, my name is</h4> <h1>Carlos <span>Osuna</span></h1>
                 <h3><span>Full Stack</span> Web Developer</h3>
-                <Link className = 'boton' to = "/about">Keep reading...</Link>
-            </div>
+                <Link className='boton' to="/about">Keep reading...</Link>
+            </motion.div>
         </div>
     );
 };

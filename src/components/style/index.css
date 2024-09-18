@@ -14,15 +14,32 @@
   background: rgba(177, 177, 177, 0.308);
 }
 
-html {
-  background-color: #919191;
+body {
+  background: linear-gradient(-45deg, #23a6d5, #0582af, #23a6d5, #086b92);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .cabeza {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
   gap: 20px;
 }
 
@@ -35,6 +52,8 @@ html {
   font-weight: 800;
   letter-spacing: 2px;
 }
+
+
 
 nav {
   display: flex;
@@ -106,7 +125,6 @@ nav img {
 
 .about {
   height: 100vh;
-  background-image: url('../img/office-back.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -118,32 +136,40 @@ nav img {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.425);
 }
 
 .about img {
   height: auto;
-  width: 400px;
+  width: 300px;
   align-items: center;
-  border: 3px solid #58A7C6;
+  border: 3px solid var(--fondo);
   margin: 30px auto;
-  border-radius: 20px;
+  border-radius: 100%;
   margin-bottom: 30px;
 }
 
+.info-about {
+  background-color: var(--fondo);
+  margin-top: 40px;
+  width: 700px;
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+
 .about h1 {
-  margin: 0px auto 2px auto;
-  border-bottom: 2px solid #58A7C6;
+  margin: 0px auto 6px auto;
+  border-bottom: 2px solid #0582af;
   width: 50%;
 }
 
 .about span {
-  color: #58A7C6;
+  color: var(--fondo);
+  font-weight: bold;
 }
 
 .about h4 {
   margin: 0px auto 5px auto;
-  color: #58A7C6;
+  color: #024864;
 }
 
 .about p {
@@ -168,37 +194,29 @@ nav img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(../img/office-back.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .projects .titulo {
   background-color: var(--fondo);
-  padding: 10px;
+  padding: 15px;
   margin-top: 34px;
-  border-radius: 20px;
-  border: 2px solid #58A7C6;
-
+  border-radius: 13px;
 }
 
 .projects .info {
   background-color: var(--fondo);
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-
-}
-
-@keyframes project {
-  0%   {border-color: #58A7C6;}
-  25%  {border-color: var(--fondo);}
-  50%  {border-color: #919191;}
-  100% {border-color: #58A7C6;}
+  border-radius: 10px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .project {
-  border-radius: 40px;
   border: 2px solid #58A7C6;
+  border-radius: 20px;
+  background-color: var(--fondo);
   margin-bottom: 30px;
   width: 600px;
   height: 100%;
@@ -236,16 +254,18 @@ nav img {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/office-865091.jpg);
   background-size: cover;
   background-position: center;
   text-align: center;
 }
 
 .home .info {
-  height: 100vh;
-  background-color: rgba(32, 32, 32, 0.568);
+  background-color: var(--fondo);
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 60px;
   padding: 30px 0;
+  border-radius: 20px;
 }
 
 .home .info h1,
@@ -284,7 +304,6 @@ h4 {
 
 
 .contact {
-  background-image: url(../img//social.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -307,7 +326,8 @@ form h3 {
   font-size: 40px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   border: 0;
   margin: 10px 0;
   padding: 20px;
@@ -387,7 +407,6 @@ form button:hover {
 
   .about {
     height: 100vh;
-    background-image: url('../img/office-back.jpg');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -447,7 +466,6 @@ form button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(../img/office-back.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -476,9 +494,6 @@ form button:hover {
     height: 300px;
   }
 
-  .card {
-    height: 500px;
-  }
 
   .project h1 {
     color: #58A7C6;
@@ -503,7 +518,6 @@ form button:hover {
   .home {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/office-865091.jpg);
     background-size: cover;
     background-position: center;
     text-align: center;
